@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Cost Estimation</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-themecolor">Construction Cost Estimator</h3>
+    </div>
+    <div class="col-md-7 align-self-center">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="http://localhost/construction_re/">Home</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+
+
+    <!-- Row -->
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card card-outline-inverse">
+                <div class="card-header">
+                    <h4 class="m-b-0 text-white">Please provide plot & gate size</h4></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Plot Size in Marla</label>
+                                <input type="text" class="form-control" id="Plotsize" name="plotsize"  placeholder="Plot Size in Marla">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Sq.Ft In 1 Marla</label>
+                                <input type="text" class="form-control" id="Sqftinmarla" name="Sqftinmarla"
+                                       placeholder="Sq.Ft In 1 Marla">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>TotalArea</label>
+                                <input type="text" class="form-control" id="Totalarea" name="totalarea" value=""
+                                       placeholder="Totalarea">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Gate Height</label>
+                                <input type="text" class="form-control" id="Gateheight" name="gateheight" value=""
+                                       placeholder="Gate Height">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Gate Width</label>
+                                <input type="text" class="form-control" id="Gatewidth" name="gatewidth" value=""
+                                       placeholder="Gate Width">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Gate Size</label>
+                                <input type="text" class="form-control" id="Gatesize" name="gatesize" value=""
+                                       placeholder="Gate Size">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-outline-info">
+                <div class="card-header">
+                    <h4 class="m-b-0 text-white">Building</h4></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>No. of Rooms</label>
+                                <input type="text" class="form-control" id="Noofrooms" name="noofrooms" value=""
+                                       placeholder="No. of Rooms">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>No. of Bathrooms</label>
+                                <input type="text" class="form-control" id="Noofbath" name="noofbath" value=""
+                                       placeholder="No. of Bathrooms">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Lounge</label>
+                                <input type="text" class="form-control" id="lounge" name="lounge" value="" placeholder="Lounge">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Drawing</label>
+                                <input type="text" class="form-control" id="Drawing" name="drawing" value=""
+                                       placeholder="Drawing">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 nopadding">
+                            <div class="form-group">
+                                <label>Kitchen</label>
+                                <input type="text" class="form-control" id="Kitchen" name="kitchen" value=""
+                                       placeholder="Kitchen">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+
+            <div class="card-body">
+                <div class="row button-group">
+                    <div class="col-lg-2 col-md-4">
+                        <button class="btn waves-effect waves-light btn-block btn-info" onclick="myFunction()">Calculate Cost</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End Row -->
+    <!-- column -->
+    <div class="col-12" id="#estimationtable">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Cost Estimated</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Total Qty(GF)(Estimated)</th>
+                            <th>Totatl Qty(FF)(Estimated)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Bricks(NO)</td>
+                            <td><p id="brickqty"></p></td>
+                            <td><p id="brickqtyff"></p></td>
+                        </tr>
+                        <tr>
+                            <td>cement(bags)(43 kg/bag)</td>
+                            <td id="cementqty"></td>
+                            <td id="cementtotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Bars(Sarya tons)</td>
+                            <td><p id="ironbarsqty"></p></td>
+                            <td><p id="ironbartotalqty"></p></td>
+                        </tr>
+                        <tr>
+                            <td>Crush(CFT)</td>
+                            <td id="crushqty"></td>
+                            <td id="crushtotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Sand(CFT)</td>
+                            <td id="sandqty"></td>
+                            <td id="sandtotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Marble(CFT)</td>
+                            <td id="marbleqty"></td>
+                            <td id="marbletotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Tiles(CFT)</td>
+                            <td id="tilesqty"></td>
+                            <td id="tilestotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Doors(Number)</td>
+                            <td id="doorsqty"></td>
+                            <td id="doorstotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Windows</td>
+                            <td id="windowsqty"></td>
+                            <td id="windowstotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Interior Wood works(SFT)</td>
+                            <td id="interiorsqty"></td>
+                            <td id="interiortotalqty"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Electric Works(SFT)</td>
+                            <td id="electricqty"></td>
+                            <td id="electrictotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Paint Works(SFT)</td>
+                            <td id="paintqty"></td>
+                            <td id="painttotalqty"></td>
+                        </tr>
+                        <tr>
+                            <td>Sanitary Work(SFT)</td>
+                            <td id="sanitaryqty"></td>
+                            <td id="sanitarytotalqty"></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- column -->
+    <!-- End Row -->
+
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Right sidebar -->
+    <!-- ============================================================== -->
+    <!-- .right-sidebar -->
+
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+<footer class="footer">
+    Construction Estimation
+</footer>
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<!--Custom JavaScript -->
+<script src="js/custom.min.js"></script>
+<script src="js/cost.js"></script>
+
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
